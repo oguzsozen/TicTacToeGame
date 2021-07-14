@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TicTacToeGame.Entities
 {
-    public class SkoreData
+    public class ScoreData
     {
         public int Id { get; set; }
         public string PlayerOneName { get; set; }
