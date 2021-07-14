@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TicTacToeGame.Entities
 {
+    /// <summary>
+    /// Oyun verilerini tutan yapıdır.
+    /// </summary>
     public class ScoreData
     {
         public int Id { get; set; }

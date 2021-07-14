@@ -11,6 +11,7 @@
 
         <!--#region MenuCanvasStyle-->
         <Style TargetType="Canvas" x:Key="MenuCanvas">
+            <Setter Property="Visibility" Value="Hidden"/>
             <Setter Property="Background" Value="#E5F1F1F1"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -67,27 +68,41 @@
 
         <!--#region StartMenu-->
 
-        <Canvas x:Name="StartMenu" Height="260" Width="300" Style="{StaticResource MenuCanvas}" Canvas.Left="105" Canvas.Top="162" Visibility="Hidden">
-            <Button Content="Yeni Oyun" Canvas.Left="75" Canvas.Top="65" Click="Button_Click_1" Style="{StaticResource MenuButton}" Background="#FF2BDA47" FontWeight="Bold" FontSize="18"/>
-            <Button Content="Skor Tablosu" Canvas.Left="75" Canvas.Top="149" Click="Button_Click_1" Style="{StaticResource MenuButton}" Background="#FF2B71DA" FontWeight="Bold" FontSize="18"/>
+        <Canvas x:Name="StartMenu" Height="260" Width="300" Style="{StaticResource MenuCanvas}" Canvas.Left="105" Canvas.Top="162" Visibility="Visible">
+            <Button Content="Yeni Oyun" Canvas.Left="75" Canvas.Top="65" Click="InputMenu_Click" Style="{StaticResource MenuButton}" Background="#FF2BDA47" FontWeight="Bold" FontSize="18"/>
+            <Button Content="Skor Tablosu" Canvas.Left="75" Canvas.Top="149" Click="ScoreTableMenu_Click" Style="{StaticResource MenuButton}" Background="#FF2B71DA" FontWeight="Bold" FontSize="18"/>
         </Canvas>
 
         <!--#endregion-->
 
+        <!--#region GameEndMenu-->
+
+        <Canvas x:Name="GameEndMenu" Height="300" Width="300" Style="{StaticResource MenuCanvas}" Canvas.Left="105" Canvas.Top="142">
+            <Button Content="Yeni Oyun" Canvas.Left="75" Canvas.Top="65" Click="InputMenu_Click" Style="{StaticResource MenuButton}" Background="#FF2BDA47" FontWeight="Bold" FontSize="18"/>
+            <Button Content="Kaydet ve Menü" Canvas.Left="75" Canvas.Top="130" Click="SaveMenu_Click" Style="{StaticResource MenuButton}" Background="#FF2B71DA" FontWeight="Bold" FontSize="18"/>
+            <Button Content="Menü" Canvas.Left="75" Canvas.Top="194" Click="StartMenu_Click" Style="{StaticResource MenuButton}" Background="#FF2B71DA" FontWeight="Bold" FontSize="18"/>
+        </Canvas>
+
+        <!--#endregion-->
+
+        <!--#region InputMenu-->
+
         <Canvas x:Name="InputMenu" Height="350" Width="450" Style="{StaticResource MenuCanvas}" Canvas.Left="30" Canvas.Top="117">
-            <Button Content="Yeni Oyun" Canvas.Left="150" Canvas.Top="254" Click="Button_Click_1" Style="{StaticResource MenuButton}" Background="#FF2BDA47" FontWeight="Bold" FontSize="18"/>
+            <Button Content="Yeni Oyun" Canvas.Left="150" Canvas.Top="254" Click="StartGame_Click" Style="{StaticResource MenuButton}" Background="#FF2BDA47" FontWeight="Bold" FontSize="18"/>
             <Label Content="İsim Giriniz" Canvas.Left="156" Canvas.Top="22" FontSize="24" FontWeight="Bold"/>
-            <TextBox x:Name="tbxPlayerNameY" Canvas.Left="257" Canvas.Top="69" Text="Player O" TextWrapping="Wrap" Style="{StaticResource NameBox}"/>
-            <TextBox x:Name="tbxPlayerNameO" Canvas.Left="41" Canvas.Top="69" Text="Player X" TextWrapping="Wrap" Style="{StaticResource NameBox}"/>
+            <TextBox x:Name="tbxPlayerTwoName" Canvas.Left="257" Canvas.Top="69" Text="Player O" TextWrapping="Wrap" Style="{StaticResource NameBox}"/>
+            <TextBox x:Name="tbxPlayerOneName" Canvas.Left="41" Canvas.Top="69" Text="Player X" TextWrapping="Wrap" Style="{StaticResource NameBox}"/>
             <TextBox x:Name="tbxRoundCount" Canvas.Left="200" Canvas.Top="175" Width="50" Text="5" TextWrapping="Wrap" Style="{StaticResource NameBox}"/>
             <Label Content="Tur Sayısını Giriniz" Canvas.Left="116" Canvas.Top="128" FontSize="24" FontWeight="Bold"/>
         </Canvas>
 
-        <!--#region SkorTableMenu-->
+        <!--#endregion-->
 
-        <Canvas x:Name="SkorTableMenu" Height="260" Width="300" Style="{StaticResource MenuCanvas}" Canvas.Left="105" Canvas.Top="162" Visibility="Hidden">
-            <Button Content="Yeni Oyun" Canvas.Left="75" Canvas.Top="65" Click="Button_Click_1" Style="{StaticResource MenuButton}" Background="#FF2BDA47" FontWeight="Bold" FontSize="18"/>
-            <Button Content="Skor Tablosu" Canvas.Left="75" Canvas.Top="149" Click="Button_Click_1" Style="{StaticResource MenuButton}" Background="#FF2B71DA" FontWeight="Bold" FontSize="18"/>
+        <!--#region ScoreTableMenu-->
+
+        <Canvas x:Name="ScoreTableMenu" Height="260" Width="300" Style="{StaticResource MenuCanvas}" Canvas.Left="105" Canvas.Top="162">
+            <Button Content="Yeni Oyun" Canvas.Left="75" Canvas.Top="65" Click="InputMenu_Click" Style="{StaticResource MenuButton}" Background="#FF2BDA47" FontWeight="Bold" FontSize="18"/>
+            <Button Content="Skor Tablosu" Canvas.Left="75" Canvas.Top="149" Click="InputMenu_Click" Style="{StaticResource MenuButton}" Background="#FF2B71DA" FontWeight="Bold" FontSize="18"/>
         </Canvas>
 
         <!--#endregion-->
@@ -96,7 +111,12 @@
 
         <!--#region BorderCanvas-->
 
-        <Canvas Height="74" Width="510" Background="#FFECECEC" >
+        <Canvas x:Name="BorderCanvas" Height="74" Width="510" Background="LightGray" >
+            <Label x:Name="LblRoundCount" Content="0" Canvas.Left="236" FontWeight="Bold" FontSize="48"/>
+            <Label x:Name="LblPlayerOneName" Content="X - ?????" Canvas.Left="20" FontWeight="Bold" FontSize="24"/>
+            <Label x:Name="LblPlayerTwoName" Content="O - ?????" Canvas.Left="373" FontWeight="Bold" FontSize="24"/>
+            <Label x:Name="LblPlayerOneWins" Content="0" Canvas.Left="67" FontWeight="Bold" FontSize="36" Canvas.Top="21"/>
+            <Label x:Name="LblPlayerTwoWins" Content="0" Canvas.Left="411" FontWeight="Bold" FontSize="36" Canvas.Top="21"/>
 
         </Canvas>
 
@@ -104,7 +124,7 @@
 
         <!--#region GameBoard-->
 
-        <Grid x:Name="Container" Height="510" Width="510" VerticalAlignment="Bottom"  Margin="0,74,0,0" >
+        <Grid x:Name="Container" Height="510" Width="510" VerticalAlignment="Bottom"  Margin="0,74,0,0" IsEnabled="False">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />

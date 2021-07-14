@@ -6,8 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Concrete\" />
     <Folder Include="Abstract\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TicTacToeGame.DataAccess\TicTacToeGame.DataAccess.csproj" />
+    <ProjectReference Include="..\TicTacToeGame.Entities\TicTacToeGame.Entities.csproj" />
   </ItemGroup>
 
 </Project>

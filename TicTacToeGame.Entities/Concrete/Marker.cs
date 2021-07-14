@@ -9,10 +9,12 @@ namespace TicTacToeGame.Entities
     /// <summary>
     /// Oyun tahtasındaki işaretleri tutan yapıdır.
     /// </summary>
-    public enum Isaret
+    public enum Marker
     {
-        Bos,
-        Yuvarlak,
-        Carpı
+        Empty,
+
+        Circle,
+
+        Cross
     }
 }

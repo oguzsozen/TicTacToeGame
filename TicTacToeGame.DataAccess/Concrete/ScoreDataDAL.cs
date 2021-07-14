@@ -10,7 +10,7 @@ using TicTacToeGame.DataAccess.Abstract;
 
 namespace TicTacToeGame.DataAccess
 {
-    class ScoreDataDAL : IDataDAL
+    public class ScoreDataDAL : IDataDAL
     {
         /// <summary>
         /// Veritabanı ile gerekli bağlantıyı kurar.

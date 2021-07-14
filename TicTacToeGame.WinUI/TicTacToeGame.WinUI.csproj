@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TicTacToeGame.Business\TicTacToeGame.Business.csproj" />
     <ProjectReference Include="..\TicTacToeGame.Entities\TicTacToeGame.Entities.csproj" />
   </ItemGroup>
 
