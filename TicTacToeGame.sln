@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToeGame.WinUI", "TicTacToeGame.WinUI\TicTacToeGame.WinUI.csproj", "{BBF29AC8-EEAB-4B26-AC56-7FF1535A114F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToeGame.Entities", "TicTacToeGame.Entities\TicTacToeGame.Entities.csproj", "{F2B6165C-AF8E-4A3E-84DE-C8A278E58F73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToeGame.DataAccess", "TicTacToeGame.DataAccess\TicTacToeGame.DataAccess.csproj", "{AD1EC73A-87F6-48C5-ADD6-79A5318AE7B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToeGame.Business", "TicTacToeGame.Business\TicTacToeGame.Business.csproj", "{05D2112D-77FC-4479-B5DD-F2D276AE0FEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBF29AC8-EEAB-4B26-AC56-7FF1535A114F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBF29AC8-EEAB-4B26-AC56-7FF1535A114F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBF29AC8-EEAB-4B26-AC56-7FF1535A114F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBF29AC8-EEAB-4B26-AC56-7FF1535A114F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2B6165C-AF8E-4A3E-84DE-C8A278E58F73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2B6165C-AF8E-4A3E-84DE-C8A278E58F73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2B6165C-AF8E-4A3E-84DE-C8A278E58F73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2B6165C-AF8E-4A3E-84DE-C8A278E58F73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD1EC73A-87F6-48C5-ADD6-79A5318AE7B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD1EC73A-87F6-48C5-ADD6-79A5318AE7B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD1EC73A-87F6-48C5-ADD6-79A5318AE7B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD1EC73A-87F6-48C5-ADD6-79A5318AE7B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05D2112D-77FC-4479-B5DD-F2D276AE0FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05D2112D-77FC-4479-B5DD-F2D276AE0FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05D2112D-77FC-4479-B5DD-F2D276AE0FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05D2112D-77FC-4479-B5DD-F2D276AE0FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48EFA3E7-6906-4BDB-91D0-016DE0DCAB35}
+	EndGlobalSection
+EndGlobal
